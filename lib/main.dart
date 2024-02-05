@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vaultapp/utils/color.dart';
 import 'package:vaultapp/views/SplashScreen/splash_screen.dart';
+import 'package:vaultapp/views/bindings/all_bindings.dart';
 
 void main() {
+  AllBindings().dependencies();
   runApp(const MyApp());
 }
 

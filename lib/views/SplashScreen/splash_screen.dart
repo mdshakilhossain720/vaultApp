@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vaultapp/calcuatecontroller/AppController/appcontroller.dart';
 import 'package:vaultapp/utils/con_fig.dart';
 import 'package:vaultapp/views/GetStarted/get_started.dart';
 class SplashScreen extends StatefulWidget {
@@ -12,10 +13,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  final appController=Get.put(AppController());
+
+
   @override
   void initState() {
     Timer(Duration(seconds: 4), () {
-      Get.to(()=>const GetStared());
+      appController.checkState();
     });
     // TODO: implement initState
     super.initState();
